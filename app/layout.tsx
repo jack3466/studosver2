@@ -4,8 +4,15 @@ import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _inter = Inter({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+// 1. Setup fonts with CSS variables for Tailwind
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+})
 
 export const metadata: Metadata = {
   title: "Stu-Dos | Made for Student Needs",
@@ -19,7 +26,7 @@ export const metadata: Metadata = {
     "internship assistance",
     "application support",
   ],
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -29,16 +36,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      {/* 2. Single body tag with font variables applied */}
+      <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
+        
+        {/* Background elements */}
+        <div className="orb-1" />
+        <div className="orb-2" />
+
+        {/* Content */}
         {children}
+        
+        {/* Analytics */}
         <Analytics />
-        <body className={`font-sans antialiased`}>
-  {/* Add these two lines for the floating colors: */}
-  <div className="orb-1" />
-  <div className="orb-2" />
-  
-  {children}
-</body>
       </body>
     </html>
   )
