@@ -1,16 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Geist_Mono } from "next/font/google"
+import { Outfit, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import ParticlesBackground from "@/components/ParticlesBackground"
 import { CustomCursor } from "@/components/CustomCursor"
 import { NoiseOverlay } from "@/components/NoiseOverlay"
 import { SmoothScroll } from "@/components/SmoothScroll"
+import { InteractiveParticleMesh } from "@/components/InteractiveParticleMesh"
 
 // 1. Setup fonts with CSS variables for Tailwind
-const inter = Inter({
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-sans",
 })
@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
+      <body className={`${outfit.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -52,7 +52,7 @@ export default function RootLayout({
           {/* Background elements */}
           <SmoothScroll />
           <CustomCursor />
-          <ParticlesBackground />
+          <InteractiveParticleMesh />
           <NoiseOverlay />
           <div className="orb-1" />
           <div className="orb-2" />

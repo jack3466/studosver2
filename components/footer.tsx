@@ -3,14 +3,14 @@ import { Facebook, Instagram, Linkedin, Mail, Twitter } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-muted/30 border-t border-border mt-auto">
+    <footer className="bg-background/40 backdrop-blur-xl border-t border-white/10 mt-auto relative z-10">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          
+
           {/* Column 1: Brand & Socials */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-               {/* Ensure you have logo.png in public folder, or remove this img tag */}
+              {/* Ensure you have logo.png in public folder, or remove this img tag */}
               <img src="/logo.png" alt="Stu-Dos" className="h-8 w-auto" />
               <span className="text-xl font-bold text-primary">Stu-Dos</span>
             </Link>
@@ -60,7 +60,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Stu-Dos. All rights reserved.
