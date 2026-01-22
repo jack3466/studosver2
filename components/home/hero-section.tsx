@@ -23,14 +23,14 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
       </div>
 
-      <AnimatedGridPattern className="opacity-30 absolute inset-0 z-0 mix-blend-overlay" />
+      <AnimatedGridPattern className="opacity-10 absolute inset-0 z-0 mix-blend-overlay" />
       <HeroBackgroundOrbs />
       <HeroGeometric />
       <FloatingServiceIcons />
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full">
         <div className="mx-auto max-w-4xl text-center">
           {/* Glass Card Container */}
-          <div className="relative rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md shadow-2xl dark:bg-black/20 dark:border-white/10 ring-1 ring-white/10 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-4 overflow-hidden group">
+          <div className="relative rounded-3xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 p-8 backdrop-blur-xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-4 overflow-hidden group">
 
             {/* Holographic Shimmer Effect */}
             <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent z-0 pointer-events-none" />
@@ -50,15 +50,15 @@ export function HeroSection() {
               We are not just a service center. We are a support system for students.
             </p>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-backwards">
-              At Stu-Dos, we understand the confusion, pressure, and uncertainty students face while managing academics,
+              At STUEHUB, we understand the confusion, pressure, and uncertainty students face while managing academics,
               applications, skills, and career decisions. From filling a single form to shaping your future path, we stand
               beside you — step by step.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700 fill-mode-backwards">
-              Whether you are a student who needs guidance, clarity, or execution support, Stu-Dos is built only for you.
+              Whether you are a student who needs guidance, clarity, or execution support, STUEHUB is built only for you.
             </p>
             <p className="mt-6 font-medium text-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-800 fill-mode-backwards">
-              Every student deserves support. Stu-Dos makes sure you never walk alone.
+              Every student deserves support. STUEHUB makes sure you never walk alone.
             </p>
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000 fill-mode-backwards">
               <MagneticButton asChild size="lg" strength={0.3} className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">

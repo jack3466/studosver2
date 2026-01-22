@@ -113,7 +113,7 @@ export function InteractiveParticleMesh() {
                 ctx.beginPath()
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
                 // High opacity for visibility
-                ctx.fillStyle = theme === 'dark' ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.5)'
+                ctx.fillStyle = theme === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.15)'
                 ctx.fill()
 
                 // Connect lines (Constellation) - check neighbors only roughly to save perf
@@ -127,6 +127,8 @@ export function InteractiveParticleMesh() {
                 // Let's just do a limited inner loop or random sample if perf is bad. 
                 // Standard double loop is fine for < 1000 particles.
 
+                // Connected lines removed to show only dots as per user request
+                /* 
                 for (let j = index + 1; j < particles.length; j++) {
                     const p2 = particles[j]
                     const distSq = (p.x - p2.x) ** 2 + (p.y - p2.y) ** 2
@@ -145,6 +147,7 @@ export function InteractiveParticleMesh() {
                         ctx.stroke()
                     }
                 }
+                */
             })
 
             animationFrameId = requestAnimationFrame(animate)

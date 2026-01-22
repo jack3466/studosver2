@@ -19,14 +19,14 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "Stu.dos.official@gmail.com",
-    href: "mailto:Stu.dos.official@gmail.com",
+    value: "stuehub@gmail.com",
+    href: "mailto:stuehub@gmail.com",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@studos.in",
-    href: "https://www.instagram.com/studos.in",
+    value: "@stuehub.in",
+    href: "https://www.instagram.com/stuehub.in",
   },
   {
     icon: Clock,
@@ -48,7 +48,7 @@ export default function ContactPage() {
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">Contact Us</h1>
               <p className="mt-4 text-lg text-primary font-medium">{"We're Here to Help You Move Forward"}</p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Have a question, need guidance, or looking for support? Reach out to Stu-Dos — we're here to assist you
+                Have a question, need guidance, or looking for support? Reach out to STUEHUB — we're here to assist you
                 with clarity and care. Whether it's an application, document, resume, or academic support, our team is
                 ready to help you take the next step with confidence.
               </p>
@@ -114,7 +114,7 @@ export default function ContactPage() {
         {/* Closing */}
         <section className="py-12 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-            <p className="text-lg font-medium">Your struggle matters. Stu-Dos stands with you.</p>
+            <p className="text-lg font-medium">Your struggle matters. STUEHUB stands with you.</p>
           </div>
         </section>
       </main>

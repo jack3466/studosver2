@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Stu-Dos | Made for Student Needs",
+  title: "STUEHUB | Made for Student Needs",
   description:
-    "Stu-Dos is a student support platform providing resume preparation, application filling, career guidance, academic support, and digital assistance. Every student deserves support.",
+    "STUEHUB is a student support platform providing resume preparation, application filling, career guidance, academic support, and digital assistance. Every student deserves support.",
   keywords: [
     "student support",
     "resume preparation",

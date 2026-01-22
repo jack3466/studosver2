@@ -52,33 +52,29 @@ export function AnimatedGridPattern({
                         x={x}
                         y={y}
                     >
-                        <path
-                            d={`M.5 ${height}V.5H${width}`}
-                            fill="none"
-                            strokeDasharray={strokeDasharray}
+                        <circle
+                            cx={1}
+                            cy={1}
+                            r={1.5}
+                            fill="currentColor"
                         />
                     </pattern>
                 </defs>
                 <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
                 <svg x={x} y={y} className="overflow-visible">
-                    {/* We could animate squares here, but a static grid moving is simpler for now */}
-                    <rect
-                        strokeWidth="0"
-                        width={width - 1}
-                        height={height - 1}
-                        x={1}
-                        y={1}
+                    <circle
+                        cx={1}
+                        cy={1}
+                        r={2.5}
                         fill="currentColor"
-                        className="text-primary/5"
+                        className="text-primary/30"
                     />
-                    <rect
-                        strokeWidth="0"
-                        width={width - 1}
-                        height={height - 1}
-                        x={width * 5 + 1}
-                        y={height * 3 + 1}
+                    <circle
+                        cx={width * 5 + 1}
+                        cy={height * 3 + 1}
+                        r={2.5}
                         fill="currentColor"
-                        className="text-accent/5"
+                        className="text-accent/30"
                     />
                 </svg>
             </svg>

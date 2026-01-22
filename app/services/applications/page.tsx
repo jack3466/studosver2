@@ -6,7 +6,7 @@ export default function ApplicationsPage() {
     <ServicePageLayout
       title="Application Filling Support"
       tagline="Don't lose opportunities due to small mistakes."
-      description="Applications can be confusing, time-consuming, and stressful. One small error can lead to rejection. Stu-Dos ensures your applications are filled correctly and submitted on time."
+      description="Applications can be confusing, time-consuming, and stressful. One small error can lead to rejection. STUEHUB ensures your applications are filled correctly and submitted on time."
       featureTitle="We Support Applications For"
       features={[
         "Passport (new & renewal)",

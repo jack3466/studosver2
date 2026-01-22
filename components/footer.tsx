@@ -10,21 +10,19 @@ export function Footer() {
           {/* Column 1: Brand & Socials */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              {/* Ensure you have logo.png in public folder, or remove this img tag */}
-              <img src="/logo.png" alt="Stu-Dos" className="h-8 w-auto" />
-              <span className="text-xl font-bold text-primary">Stu-Dos</span>
+              <img src="/logo.png" alt="STUEHUB" className="h-16 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Empowering students with clarity, support, and confidence.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://www.instagram.com/studos.in/" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.instagram.com/stuehub.in/" className="text-muted-foreground hover:text-primary">
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="mailto:stu.dos.official@gmail.com" className="text-muted-foreground hover:text-primary">
+              <Link href="mailto:stuehub@gmail.com" className="text-muted-foreground hover:text-primary">
                 <Mail className="h-5 w-5" />
               </Link>
             </div>
@@ -63,7 +61,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Stu-Dos. All rights reserved.
+            &copy; {new Date().getFullYear()} STUEHUB. All rights reserved.
           </p>
         </div>
       </div>

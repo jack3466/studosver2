@@ -57,7 +57,7 @@ def remove_white_background_soft(input_path, output_path, tolerance=50):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    input_file = os.path.join("public", "logomax.jpg")
-    output_file = os.path.join("public", "logo-transparent.png")
+    input_file = os.path.join("public", "logo.png")
+    output_file = os.path.join("public", "logo.png")
     
     remove_white_background_soft(input_file, output_file, tolerance=60)

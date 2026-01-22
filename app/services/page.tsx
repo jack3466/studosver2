@@ -116,11 +116,11 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Why Stu-Dos */}
+        {/* Why STUEHUB */}
         <section className="py-16 bg-secondary">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl font-bold mb-4">Why Choose Stu-Dos?</h2>
+              <h2 className="text-2xl font-bold mb-4">Why Choose STUEHUB?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Because students don't fail due to lack of talent — they fail due to lack of guidance and support. We
                 treat every student problem as personal and every success as shared.
@@ -132,7 +132,7 @@ export default function ServicesPage() {
         {/* Closing */}
         <section className="py-12 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-            <p className="text-lg font-medium">Your struggle matters. Stu-Dos stands with you.</p>
+            <p className="text-lg font-medium">Your struggle matters. STUEHUB stands with you.</p>
           </div>
         </section>
       </main>

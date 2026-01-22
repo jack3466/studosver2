@@ -6,7 +6,7 @@ export default function CareerPage() {
     <ServicePageLayout
       title="Internship & Career Assistance"
       tagline="Your career deserves the right direction."
-      description="Choosing the right internship or career path can change your future. At Stu-Dos, we guide students to make informed and confident career decisions."
+      description="Choosing the right internship or career path can change your future. At STUEHUB, we guide students to make informed and confident career decisions."
       featureTitle="What We Offer"
       features={[
         "Internship guidance & application support",

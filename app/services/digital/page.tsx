@@ -6,7 +6,7 @@ export default function DigitalPage() {
     <ServicePageLayout
       title="Digital & Practical Support"
       tagline="Everyday student needs, handled smoothly."
-      description="From online forms to digital documents, students face daily technical challenges. Stu-Dos solves them quickly and correctly."
+      description="From online forms to digital documents, students face daily technical challenges. STUEHUB solves them quickly and correctly."
       featureTitle="Services Include"
       features={[
         "Online form assistance",

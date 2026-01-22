@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Stu-Dos Brand Colors - Professional, Trustworthy, Student-Friendly */
+  /* STUEHUB Brand Colors - Professional, Trustworthy, Student-Friendly */
   --background: oklch(0.985 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);

@@ -6,7 +6,7 @@ export default function ResumePage() {
     <ServicePageLayout
       title="Resume & CV Preparation"
       tagline="Because your first impression matters."
-      description="A resume is not just a document — it is your story. At Stu-Dos, we help students present their skills, education, and potential in a professional and confident way."
+      description="A resume is not just a document — it is your story. At STUEHUB, we help students present their skills, education, and potential in a professional and confident way."
       featureTitle="What We Provide"
       features={[
         "Student resumes (freshers & experienced)",

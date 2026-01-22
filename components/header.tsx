@@ -31,17 +31,17 @@ export function Header() {
 
         {/* --- LEFT: LOGO --- */}
         <div className="pointer-events-auto">
-          <Link href="/" className="flex items-center gap-2 p-2 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/10 transition-colors">
+          <Link href="/" className="flex items-center gap-1 p-2 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/10 transition-colors">
             <img
-              src="/logo-transparent.png"
-              alt="Stu-Dos"
-              className="h-10 w-auto object-contain dark:invert dark:hue-rotate-180"
+              src="/logo.png"
+              alt="STUEHUB"
+              className="h-20 w-auto object-contain"
             />
           </Link>
         </div>
 
         {/* --- CENTER: GLASS DOCK (Desktop) --- */}
-        <nav className="pointer-events-auto hidden md:flex items-center gap-1 px-3 py-2 rounded-full border border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-2xl shadow-2xl ring-1 ring-white/10">
+        <nav className="pointer-events-auto hidden md:flex items-center gap-1 px-3 py-2 rounded-full border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 backdrop-blur-2xl shadow-xl ring-1 ring-black/5 dark:ring-white/10">
           {navItems.map((item) => {
             const isActive = pathname === item.href
             const Icon = item.icon
@@ -105,7 +105,7 @@ export function Header() {
             ))}
             <div className="flex items-center gap-4 mt-8">
               <ThemeToggle />
-              <Button asChild rounded="full">
+              <Button asChild className="rounded-full">
                 <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
               </Button>
             </div>

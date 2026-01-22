@@ -45,7 +45,7 @@ export default function AboutPage() {
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">About Us</h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                Stu-Dos was created with one simple belief: Every student deserves support, clarity, and confidence.
+                STUEHUB was created with one simple belief: Every student deserves support, clarity, and confidence.
               </p>
             </div>
           </div>
@@ -63,7 +63,7 @@ export default function AboutPage() {
                   confusion.
                 </p>
                 <p className="font-medium text-foreground">
-                  At Stu-Dos, we don't see students as customers. We see them as dreamers, learners, and future
+                  At STUEHUB, we don't see students as customers. We see them as dreamers, learners, and future
                   professionals who just need the right guidance at the right time.
                 </p>
               </div>
@@ -71,11 +71,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Why Stu-Dos Exists */}
+        {/* Why STUEHUB Exists */}
         <section className="py-16 bg-secondary">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
-              <h2 className="text-2xl font-bold mb-6">Why Stu-Dos Exists</h2>
+              <h2 className="text-2xl font-bold mb-6">Why STUEHUB Exists</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 In today's world, students are expected to manage everything on their own — applications, resumes,
                 skills, internships, exams, and career planning. But reality is different.
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 ))}
               </ul>
               <p className="font-medium text-foreground">
-                Stu-Dos was born to fill this gap. We exist to simplify processes, reduce pressure, and stand beside
+                STUEHUB was born to fill this gap. We exist to simplify processes, reduce pressure, and stand beside
                 students when they need help the most.
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function AboutPage() {
             <div className="text-center mb-12">
               <h2 className="text-2xl font-bold mb-4">What Makes Us Different</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Stu-Dos is not just about services — it's about understanding.
+                STUEHUB is not just about services — it's about understanding.
               </p>
             </div>
 
@@ -157,7 +157,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
               <h2 className="text-2xl font-bold mb-6">Our Commitment to Students</h2>
-              <p className="text-muted-foreground mb-6">At Stu-Dos, we promise to:</p>
+              <p className="text-muted-foreground mb-6">At STUEHUB, we promise to:</p>
               <ul className="space-y-3 mb-6">
                 {commitments.map((commitment, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -214,28 +214,28 @@ export default function AboutPage() {
               <div className="bg-secondary rounded-lg p-8">
                 <p className="text-lg text-foreground font-medium mb-4">You are not alone.</p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  If you are confused, stressed, or unsure about the next step — Stu-Dos is here for you. Your journey
+                  If you are confused, stressed, or unsure about the next step — STUEHUB is here for you. Your journey
                   matters. Your dreams matter. And we are proud to be part of your story.
                 </p>
                 <div className="border-t border-border pt-6 mt-6">
                   <p className="text-muted-foreground italic leading-relaxed mb-6">
-                    "Stu-Dos was not born out of comfort. It was born out of struggle — struggles I have personally
+                    "STUEHUB was not born out of comfort. It was born out of struggle — struggles I have personally
                     faced and struggles I have witnessed in countless students. It stands for clarity, reliability, and
                     practical assistance. It is built to support students through applications, documentation, skills,
                     and career-related needs — step by step, without judgment or confusion."
                   </p>
-                  
+
                   {/* --- NEW SECTION: Founder Image & Name --- */}
                   <div className="flex items-center gap-4">
                     {/* Make sure 'founder.png' is in your public folder! */}
-                    <img 
-                      src="/founder.jpg" 
-                      alt="Siva Sai Krishna Sankurathri" 
+                    <img
+                      src="/founder.jpg"
+                      alt="Siva Sai Krishna Sankurathri"
                       className="h-16 w-16 rounded-full object-cover border-2 border-primary"
                     />
                     <div>
-                        <p className="font-semibold text-lg text-foreground">Siva Sai Krishna Sankurathri</p>
-                        <p className="text-sm text-primary font-medium">Founder & CEO, Stu-Dos</p>
+                      <p className="font-semibold text-lg text-foreground">Siva Sai Krishna Sankurathri</p>
+                      <p className="text-sm text-primary font-medium">Founder & CEO, STUEHUB</p>
                     </div>
                   </div>
                   {/* ---------------------------------------- */}
@@ -243,19 +243,19 @@ export default function AboutPage() {
                 </div>
                 <div className="border-t border-border pt-6 mt-6">
                   <p className="text-muted-foreground italic leading-relaxed mb-6">
-                    "I know what it feels like to be lost at sea without a map. That’s why I built this ship! 
-                    Stu-Dos is the proof that your struggle isn't the end—it's the start of your adventure. 
-                    Documentation, careers, skills? Leave the boring stuff to me. 
+                    "I know what it feels like to be lost at sea without a map. That’s why I built this ship!
+                    STUEHUB is the proof that your struggle isn't the end—it's the start of your adventure.
+                    Documentation, careers, skills? Leave the boring stuff to me.
                     You just focus on becoming the King of your own future!"
                   </p>
-                  
+
                   {/* --- NEW SECTION: Founder Image & Name --- */}
                   <div className="flex items-center gap-4">
                     {/* Make sure 'founder.png' is in your public folder! */}
-                   
+
                     <div>
-                        <p className="font-semibold text-lg text-foreground">Shaik Omar Farooq</p>
-                        <p className="text-sm text-primary font-medium"> - CTO, Stu-Dos</p>
+                      <p className="font-semibold text-lg text-foreground">Shaik Omar Farooq</p>
+                      <p className="text-sm text-primary font-medium"> - CTO, STUEHUB</p>
                     </div>
                   </div>
                   {/* ---------------------------------------- */}
@@ -270,7 +270,7 @@ export default function AboutPage() {
         <section className="py-12 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
             <p className="text-lg font-medium mb-6">
-              Stu-Dos — because every student deserves someone who understands.
+              STUEHUB — because every student deserves someone who understands.
             </p>
             <Button asChild variant="secondary" size="lg">
               <Link href="/contact">

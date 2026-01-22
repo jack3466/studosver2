@@ -6,7 +6,7 @@ export default function AcademicPage() {
     <ServicePageLayout
       title="Academic Support Services"
       tagline="When academics feel heavy, we support you."
-      description="Academic pressure can affect confidence and performance. Stu-Dos provides structured academic assistance so students can stay stress-free."
+      description="Academic pressure can affect confidence and performance. STUEHUB provides structured academic assistance so students can stay stress-free."
       featureTitle="Academic Support Includes"
       features={[
         "Assignment formatting",

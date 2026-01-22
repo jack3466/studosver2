@@ -110,7 +110,7 @@ export function ServicePageLayout({
         {/* Closing Line */}
         <section className="py-12 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-            <p className="text-lg font-medium">Your struggle matters. Stu-Dos stands with you.</p>
+            <p className="text-lg font-medium">Your struggle matters. STUEHUB stands with you.</p>
           </div>
         </section>
       </main>
