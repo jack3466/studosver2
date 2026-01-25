@@ -1,86 +1,73 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { motion } from "framer-motion"
 
 interface ScrollAnimationProps {
     children: React.ReactNode
     className?: string
-    animation?: "fade-up" | "fade-in" | "slide-left" | "slide-right"
+    animation?: "fade-up" | "fade-in" | "slide-left" | "slide-right" | "scale-up"
     delay?: number
+    duration?: number
 }
 
 export function ScrollAnimation({
     children,
     className = "",
     animation = "fade-up",
-    delay = 0
+    delay = 0,
+    duration = 0.7
 }: ScrollAnimationProps) {
-    const ref = useRef<HTMLDivElement>(null)
-    const [isVisible, setIsVisible] = useState(false)
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true)
-                    observer.unobserve(entry.target)
+    const getVariants = () => {
+        switch (animation) {
+            case "fade-up":
+                return {
+                    hidden: { opacity: 0, y: 40 },
+                    visible: { opacity: 1, y: 0 }
                 }
-            },
-            {
-                threshold: 0.1,
-                rootMargin: "50px",
-            }
-        )
-
-        if (ref.current) {
-            observer.observe(ref.current)
-        }
-
-        return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current)
-            }
-        }
-    }, [])
-
-    const getAnimationClass = () => {
-        switch (animation) {
-            case "fade-up":
-                return "translate-y-10 opacity-0"
             case "fade-in":
-                return "opacity-0"
+                return {
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1 }
+                }
             case "slide-left":
-                return "-translate-x-10 opacity-0"
+                return {
+                    hidden: { opacity: 0, x: -40 },
+                    visible: { opacity: 1, x: 0 }
+                }
             case "slide-right":
-                return "translate-x-10 opacity-0"
+                return {
+                    hidden: { opacity: 0, x: 40 },
+                    visible: { opacity: 1, x: 0 }
+                }
+            case "scale-up":
+                return {
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 }
+                }
             default:
-                return "opacity-0"
-        }
-    }
-
-    const getVisibleClass = () => {
-        switch (animation) {
-            case "fade-up":
-                return "translate-y-0 opacity-100"
-            case "fade-in":
-                return "opacity-100"
-            case "slide-left":
-                return "translate-x-0 opacity-100"
-            case "slide-right":
-                return "translate-x-0 opacity-100"
-            default:
-                return "opacity-100"
+                return {
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1 }
+                }
         }
     }
 
     return (
-        <div
-            ref={ref}
-            className={`transition-all duration-1000 ease-out ${className} ${isVisible ? getVisibleClass() : getAnimationClass()
-                }`}
-            style={{ transitionDelay: `${delay}ms` }}
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={getVariants()}
+            transition={{
+                duration: duration,
+                delay: delay / 1000,
+                // Ultra smooth spring-like bezier
+                ease: [0.22, 1, 0.36, 1],
+                type: "tween" // using tween with custom ease for more predictable "smoothness" than spring sometimes
+            }}
+            className={className}
         >
             {children}
-        </div>
+        </motion.div>
     )
 }

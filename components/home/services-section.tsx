@@ -4,6 +4,7 @@ import { ArrowRight, FileText, ClipboardCheck, Briefcase, BookOpen, Wrench, Moni
 import { StaggeredList } from "@/components/StaggerContainer"
 import { SpotlightCard } from "@/components/SpotlightCard"
 import { ParallaxImage } from "@/components/ParallaxImage"
+import { ScrollAnimation } from "@/components/ScrollAnimation"
 
 const services = [
   {
@@ -63,40 +64,46 @@ export function ServicesSection() {
         </div>
 
         <StaggeredList className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <Link key={service.title} href={service.href} className="group block h-full">
-              <SpotlightCard className="h-full bg-card/50 backdrop-blur-sm border-primary/10">
-                <CardContent className="p-0 h-full flex flex-col">
-                  {/* Image Header */}
-                  <div className="relative w-full h-48 overflow-hidden rounded-t-lg bg-muted/20">
-                    <ParallaxImage intensity={10} className="w-full h-full">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-500 scale-105"
-                      />
-                    </ParallaxImage>
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
-                  </div>
+          {services.map((service, index) => (
+            <ScrollAnimation
+              key={service.title}
+              className="h-full"
+              animation={index % 2 === 0 ? "slide-left" : "slide-right"}
+            >
+              <Link href={service.href} className="group block h-full">
+                <SpotlightCard className="h-full bg-card/50 backdrop-blur-sm border-primary/10">
+                  <CardContent className="p-0 h-full flex flex-col">
+                    {/* Image Header */}
+                    <div className="relative w-full h-48 overflow-hidden rounded-t-lg bg-muted/20">
+                      <ParallaxImage intensity={10} className="w-full h-full">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-500 scale-105"
+                        />
+                      </ParallaxImage>
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
+                    </div>
 
-                  <div className="p-6 flex-1 flex flex-col relative z-10">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                        <service.icon className="h-5 w-5" />
+                    <div className="p-6 flex-1 flex flex-col relative z-10">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                          <service.icon className="h-5 w-5" />
+                        </div>
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">{service.title}</h3>
                       </div>
-                      <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">{service.title}</h3>
-                    </div>
 
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{service.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{service.description}</p>
 
-                    <div className="flex items-center text-sm font-medium text-primary mt-auto">
-                      Learn more
-                      <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      <div className="flex items-center text-sm font-medium text-primary mt-auto">
+                        Learn more
+                        <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </SpotlightCard>
-            </Link>
+                  </CardContent>
+                </SpotlightCard>
+              </Link>
+            </ScrollAnimation>
           ))}
         </StaggeredList>
       </div>

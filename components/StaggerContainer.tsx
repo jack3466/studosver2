@@ -38,28 +38,63 @@ export function StaggerContainer({
 
 // Helper to wrap lists with automatic delay calculation
 import React from 'react'
+import { motion } from "framer-motion"
 
 export function StaggeredList({
     children,
     className = "",
-    baseDelay = 0
+    baseDelay = 0,
+    staggerDuration = 0.15
 }: {
     children: React.ReactNode,
     className?: string,
-    baseDelay?: number
+    baseDelay?: number,
+    staggerDuration?: number
 }) {
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: staggerDuration,
+                delayChildren: baseDelay / 1000
+            }
+        }
+    }
+
     return (
-        <div className={className}>
-            {React.Children.map(children, (child, index) => (
-                <ScrollAnimation
-                    key={index}
-                    delay={baseDelay + (index * 100)}
-                    animation="fade-up"
-                    className="h-full" // Ensure cards stretch
-                >
-                    {child}
-                </ScrollAnimation>
-            ))}
-        </div>
+        <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+            className={className}
+        >
+            {/* 
+              We map children and wrap them in a motion component so they implicitly pick up the parent's staggered transition.
+              However, since our ScrollAnimation component *also* has initial/whileInView, they might conflict if nested directly without care.
+              
+              Actually, the cleanest way with Framer Motion stagger is to have the PARENT control the "show" state, and children just have variants.
+              
+              But our ScrollAnimation component is designed to be standalone. 
+              
+              Hybrid approach: 
+              We can keep ScrollAnimation as is (standalone), OR we can make StaggeredList intelligent.
+              
+              To avoid rewriting all children usage, let's keep it simple: 
+              We'll just map the children and clone them with an increasing delay prop, 
+              which `ScrollAnimation` already accepts.
+            */}
+            {React.Children.map(children, (child, index) => {
+                if (React.isValidElement(child)) {
+                    return React.cloneElement(child, {
+                        // @ts-ignore - we assume the child accepts standard props or we wrap it
+                        delay: baseDelay + (index * 100),
+                        // We can also force the animation type if we wanted, but let's trust the child
+                    } as any)
+                }
+                return child
+            })}
+        </motion.div>
     )
 }
