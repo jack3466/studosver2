@@ -16,7 +16,7 @@ export function Footer() {
               Empowering students with clarity, support, and confidence.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://www.instagram.com/stuehub.in/" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.instagram.com/stuehub?utm_source=qr&igsh=bnpwdDBiaXl3ZTBs" className="text-muted-foreground hover:text-primary">
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">

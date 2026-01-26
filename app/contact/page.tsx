@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Vijayawada, Andhra Pradesh, India",
-    href: null,
+    value: "STUEHUB, 76-1-450/15/4A, Housing Board Colony Rd, Beside Triangle Park, Revenue colony, Bhavanipuram, Vijayawada, Andhra Pradesh 520012",
+    href: "https://www.google.com/maps/place/STUEHUB/@16.5358897,80.5919844,846m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a35ef8f5ea182c9:0xbab25ec2b842f24d!8m2!3d16.5358897!4d80.5945593!16s%2Fg%2F11yxjq4c6d?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D",
   },
   {
     icon: Phone,
@@ -25,8 +25,8 @@ const contactInfo = [
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@stuehub.in",
-    href: "https://www.instagram.com/stuehub.in",
+    value: "@stuehub",
+    href: "https://www.instagram.com/stuehub?utm_source=qr&igsh=bnpwdDBiaXl3ZTBs",
   },
   {
     icon: Clock,
@@ -88,12 +88,17 @@ export default function ContactPage() {
                   ))}
                 </div>
 
-                {/* Map placeholder */}
-                <div className="mt-8 rounded-lg bg-secondary h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">Vijayawada, Andhra Pradesh</p>
-                  </div>
+                {/* Google Map Embed */}
+                <div className="mt-8 rounded-lg overflow-hidden h-64 border border-border shadow-sm">
+                  <iframe
+                    src="https://maps.google.com/maps?q=16.5358897,80.5945593&hl=en&z=14&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
 
