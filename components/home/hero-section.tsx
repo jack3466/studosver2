@@ -63,7 +63,7 @@ export function HeroSection() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90vh] flex items-center justify-center perspective-1000"
+      className="relative pt-24 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90vh] flex items-center justify-center perspective-1000"
     >
       {/* --- LAYER 1: BACKGROUND (Slow) --- */}
       <motion.div
@@ -87,15 +87,15 @@ export function HeroSection() {
       <FloatingServiceIcons />
 
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full">
 
         {/* --- LAYER 2: TEXT CONTENT (Medium) --- */}
         <motion.div
           style={{ x: xMid, y: yMid, z: 10 }}
-          className="mx-auto max-w-2xl text-center lg:text-left relative z-20"
+          className="mx-auto max-w-4xl text-center relative z-20"
         >
           {/* Glass Card Container (Optional wrapper, or just text) */}
-          <div className="relative rounded-3xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 p-8 backdrop-blur-xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-4 overflow-hidden group">
+          <div className="relative rounded-3xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 p-5 md:p-8 backdrop-blur-xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-4 overflow-hidden group">
 
             {/* Holographic Shimmer Effect */}
             <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent z-0 pointer-events-none" />
@@ -106,7 +106,7 @@ export function HeroSection() {
               </p>
             </div>
 
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl text-balance h-24 sm:h-auto mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-backwards">
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl text-balance h-auto mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-backwards">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary animate-gradient pb-2">
                 <ScrambleText text="Who We Are" duration={3000} className="" />
               </span>
@@ -121,7 +121,7 @@ export function HeroSection() {
             {/* --- LAYER 3: BUTTONS (Fast) --- */}
             <motion.div
               style={{ x: xFast, y: yFast }}
-              className="mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000 fill-mode-backwards"
+              className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000 fill-mode-backwards"
             >
               <MagneticButton asChild size="lg" strength={0.4} className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
                 <Link href="/services">
@@ -133,23 +133,6 @@ export function HeroSection() {
                 <Link href="/contact">Get Assistance</Link>
               </MagneticButton>
             </motion.div>
-          </div>
-        </motion.div>
-
-        {/* --- LAYER 3: FLOATER 3D OBJECT (Fast) --- */}
-        <motion.div
-          style={{ x: xFast, y: yFast, rotateY: useTransform(springX, [-1, 1], [-20, 20]), rotateX: useTransform(springY, [-1, 1], [20, -20]) }}
-          className="hidden lg:flex items-center justify-center pointer-events-none relative z-10"
-        >
-          {/* Abstract 3D Cube/Shape Representation using CSS */}
-          <div className="w-64 h-64 relative animate-float-complex transform-style-3d">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-md animate-mesh-spin mix-blend-screen" />
-            <div className="absolute inset-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl flex items-center justify-center">
-              <img src="/logo.png" alt="Floater Logo" className="w-32 h-32 object-contain opacity-80" />
-            </div>
-            {/* Decorative orbiting elements */}
-            <div className="absolute top-0 right-0 w-16 h-16 bg-accent/40 rounded-full blur-xl animate-blob" />
-            <div className="absolute bottom-0 left-0 w-20 h-20 bg-primary/40 rounded-full blur-xl animate-blob animation-delay-2000" />
           </div>
         </motion.div>
 

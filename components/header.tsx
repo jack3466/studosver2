@@ -28,7 +28,7 @@ export function Header() {
         Fixed top, no background pointer-events-none so clicks on page work.
         Children have pointer-events-auto.
       */}
-      <header className="fixed top-6 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-12 pointer-events-none">
+      <header className="fixed top-6 left-0 right-0 z-50 flex items-center justify-between px-4 lg:px-12 pointer-events-none">
 
         {/* --- LEFT: LOGO --- */}
         <div className="pointer-events-auto">
@@ -36,7 +36,7 @@ export function Header() {
             <img
               src="/logo.png"
               alt="STUEHUB"
-              className="h-20 w-auto object-contain"
+              className="h-14 md:h-20 w-auto object-contain"
             />
           </Link>
         </div>
