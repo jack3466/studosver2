@@ -50,15 +50,16 @@ export default function RootLayout({
         >
           {/* Background elements */}
           {/* Background elements */}
-          <SmoothScroll />
-          <CustomCursor />
-          <InteractiveParticleMesh />
-          <NoiseOverlay />
-          <div className="orb-1" />
-          <div className="orb-2" />
+          <SmoothScroll>
+            <CustomCursor />
+            <InteractiveParticleMesh />
+            <NoiseOverlay />
+            <div className="orb-1" />
+            <div className="orb-2" />
 
-          {/* Content */}
-          {children}
+            {/* Content */}
+            {children}
+          </SmoothScroll>
 
           {/* Analytics */}
           <Analytics />

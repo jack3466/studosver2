@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, FileText, ClipboardCheck, Briefcase, BookOpen, Wrench, Monitor } from "lucide-react"
 import { StaggeredList } from "@/components/StaggerContainer"
-import { SpotlightCard } from "@/components/SpotlightCard"
+import { HolographicCard } from "@/components/HolographicCard"
 import { ParallaxImage } from "@/components/ParallaxImage"
 import { ScrollAnimation } from "@/components/ScrollAnimation"
 
@@ -71,10 +71,10 @@ export function ServicesSection() {
               animation={index % 2 === 0 ? "slide-left" : "slide-right"}
             >
               <Link href={service.href} className="group block h-full">
-                <SpotlightCard className="h-full bg-card/50 backdrop-blur-sm border-primary/10">
+                <HolographicCard className="h-full">
                   <CardContent className="p-0 h-full flex flex-col">
                     {/* Image Header */}
-                    <div className="relative w-full h-48 overflow-hidden rounded-t-lg bg-muted/20">
+                    <div className="relative w-full h-48 overflow-hidden bg-muted/20">
                       <ParallaxImage intensity={10} className="w-full h-full">
                         <img
                           src={service.image}
@@ -85,9 +85,9 @@ export function ServicesSection() {
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
                     </div>
 
-                    <div className="p-6 flex-1 flex flex-col relative z-10">
+                    <div className="p-6 flex-1 flex flex-col relative z-20">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
                           <service.icon className="h-5 w-5" />
                         </div>
                         <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">{service.title}</h3>
@@ -101,7 +101,7 @@ export function ServicesSection() {
                       </div>
                     </div>
                   </CardContent>
-                </SpotlightCard>
+                </HolographicCard>
               </Link>
             </ScrollAnimation>
           ))}

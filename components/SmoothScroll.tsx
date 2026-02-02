@@ -1,16 +1,11 @@
 "use client"
 
-import { useEffect } from "react"
+import { ReactLenis } from "@studio-freight/react-lenis"
 
-export function SmoothScroll() {
-    useEffect(() => {
-        // Add smooth scrolling to html
-        document.documentElement.style.scrollBehavior = "smooth"
-
-        return () => {
-            document.documentElement.style.scrollBehavior = "auto"
-        }
-    }, [])
-
-    return null
+export function SmoothScroll({ children }: { children: React.ReactNode }) {
+  return (
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
+      {children}
+    </ReactLenis>
+  )
 }

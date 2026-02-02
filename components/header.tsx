@@ -7,6 +7,7 @@ import { Home, Grid, BookOpen, User, Mail, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/ThemeToggle"
+import { MagneticButton } from "@/components/MagneticButton"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
@@ -47,23 +48,24 @@ export function Header() {
             const Icon = item.icon
 
             return (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "relative group flex items-center justify-center p-2.5 rounded-full transition-all duration-300 ease-out hover:scale-110",
-                  isActive
-                    ? "bg-primary text-primary-foreground shadow-md"
-                    : "text-muted-foreground hover:text-foreground hover:bg-white/10 dark:hover:bg-white/10"
-                )}
-              >
-                <Icon size={18} strokeWidth={2.5} />
+              <MagneticButton key={item.name} strength={0.2} className="bg-transparent shadow-none hover:bg-transparent p-0">
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "relative group flex items-center justify-center p-2.5 rounded-full transition-all duration-300 ease-out",
+                    isActive
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "text-muted-foreground hover:text-foreground hover:bg-white/10 dark:hover:bg-white/10"
+                  )}
+                >
+                  <Icon size={18} strokeWidth={2.5} />
 
-                {/* Tooltip */}
-                <span className="absolute -bottom-10 opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 dark:bg-white/90 text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-md whitespace-nowrap pointer-events-none translate-y-2 group-hover:translate-y-0 duration-200">
-                  {item.name}
-                </span>
-              </Link>
+                  {/* Tooltip */}
+                  <span className="absolute -bottom-10 opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 dark:bg-white/90 text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-md whitespace-nowrap pointer-events-none translate-y-2 group-hover:translate-y-0 duration-200">
+                    {item.name}
+                  </span>
+                </Link>
+              </MagneticButton>
             )
           })}
         </nav>

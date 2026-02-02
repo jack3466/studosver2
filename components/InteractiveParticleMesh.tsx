@@ -35,11 +35,11 @@ export function InteractiveParticleMesh() {
         let height = 0
 
         // Configuration
-        const particleSpacing = 45 // Denser mesh (was 60)
-        const interactionRadius = 250 // Much larger reach (was 150)
-        const returnSpeed = 0.08 // Slower snap-back for more floaty feel
-        const repulsionStrength = 8 // Stronger push (was 2)
-        const connectionDistance = 120 // Connect further
+        const particleSpacing = 80 // Reduced density for performance (was 45)
+        const interactionRadius = 300 // Adjusted for sparser mesh
+        const returnSpeed = 0.08
+        const repulsionStrength = 8
+        const connectionDistance = 150
 
         const init = () => {
             width = window.innerWidth

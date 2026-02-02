@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState } from "react"
+import { motion, useSpring, useTransform, useMotionValue } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -14,39 +15,54 @@ export function MagneticButton({
     strength = 0.5,
     ...props
 }: MagneticButtonProps) {
-    const btnRef = useRef<HTMLButtonElement>(null)
-    const [position, setPosition] = useState({ x: 0, y: 0 })
+    const ref = useRef<HTMLDivElement>(null)
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // Mouse position values
+    const x = useMotionValue(0)
+    const y = useMotionValue(0)
+
+    // Smooth spring physics for the magnetic effect
+    const springConfig = { damping: 15, stiffness: 150, mass: 0.1 }
+    const springX = useSpring(x, springConfig)
+    const springY = useSpring(y, springConfig)
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const { clientX, clientY } = e
-        const { left, top, width, height } = e.currentTarget.getBoundingClientRect()
+        const { left, top, width, height } = ref.current!.getBoundingClientRect()
 
-        const x = (clientX - (left + width / 2)) * strength
-        const y = (clientY - (top + height / 2)) * strength
+        const centerX = left + width / 2
+        const centerY = top + height / 2
 
-        setPosition({ x, y })
+        const distanceX = (clientX - centerX) * strength
+        const distanceY = (clientY - centerY) * strength
+
+        x.set(distanceX)
+        y.set(distanceY)
     }
 
     const handleMouseLeave = () => {
-        setPosition({ x: 0, y: 0 })
+        x.set(0)
+        y.set(0)
     }
 
     return (
-        <Button
-            ref={btnRef}
+        <motion.div
+            ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className={cn(
-                "transition-transform duration-100 ease-out will-change-transform relative overflow-hidden",
-                className
-            )}
-            style={{
-                transform: `translate(${position.x}px, ${position.y}px)`,
-            }}
-            {...props}
+            style={{ x: springX, y: springY }}
+            className={cn("inline-block", className)}
         >
-            {/* Ripple/Glow effect on hover could go here */}
-            <span className="relative z-10">{children}</span>
-        </Button>
+            <Button
+                className={cn(
+                    "relative overflow-hidden transition-colors duration-300",
+                    "bg-primary text-primary-foreground shadow-lg",
+                    className
+                )}
+                {...props}
+            >
+                {children}
+            </Button>
+        </motion.div>
     )
 }
