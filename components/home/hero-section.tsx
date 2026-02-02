@@ -39,6 +39,10 @@ export function HeroSection() {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return
+
+    // Disable parallax on mobile/tablet (touch devices)
+    if (typeof window !== 'undefined' && window.matchMedia('(hover: none), (max-width: 1024px)').matches) return
+
     const { width, height, left, top } = containerRef.current.getBoundingClientRect()
 
     // Normalized coordinates (-1 to 1)

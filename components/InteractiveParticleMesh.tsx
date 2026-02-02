@@ -74,8 +74,8 @@ export function InteractiveParticleMesh() {
             ctx.clearRect(0, 0, width, height)
 
             // Smooth mouse for less jittery physics
-            smoothedMouse.current.x += (mouse.current.x - smoothedMouse.current.x) * 0.1
-            smoothedMouse.current.y += (mouse.current.y - smoothedMouse.current.y) * 0.1
+            smoothedMouse.current.x += (mouse.current.x - smoothedMouse.current.x) * 0.2
+            smoothedMouse.current.y += (mouse.current.y - smoothedMouse.current.y) * 0.2
 
             particles.forEach((p, index) => {
                 // Physics

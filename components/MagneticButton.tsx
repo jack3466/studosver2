@@ -16,6 +16,7 @@ export function MagneticButton({
     ...props
 }: MagneticButtonProps) {
     const ref = useRef<HTMLDivElement>(null)
+    const rectRef = useRef<DOMRect | null>(null)
 
     // Mouse position values
     const x = useMotionValue(0)
@@ -26,9 +27,17 @@ export function MagneticButton({
     const springX = useSpring(x, springConfig)
     const springY = useSpring(y, springConfig)
 
+    const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (ref.current) {
+            rectRef.current = ref.current.getBoundingClientRect()
+        }
+    }
+
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!rectRef.current) return
+
         const { clientX, clientY } = e
-        const { left, top, width, height } = ref.current!.getBoundingClientRect()
+        const { left, top, width, height } = rectRef.current
 
         const centerX = left + width / 2
         const centerY = top + height / 2
@@ -43,11 +52,13 @@ export function MagneticButton({
     const handleMouseLeave = () => {
         x.set(0)
         y.set(0)
+        rectRef.current = null
     }
 
     return (
         <motion.div
             ref={ref}
+            onMouseEnter={handleMouseEnter}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{ x: springX, y: springY }}

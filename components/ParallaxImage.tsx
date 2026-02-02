@@ -19,6 +19,9 @@ export function ParallaxImage({
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!containerRef.current) return
 
+        // Disable on mobile/touch devices
+        if (typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches) return
+
         const { left, top, width, height } = containerRef.current.getBoundingClientRect()
         const x = (e.clientX - left - width / 2) / (width / 2)
         const y = (e.clientY - top - height / 2) / (height / 2)
