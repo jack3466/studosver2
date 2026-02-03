@@ -4,73 +4,117 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* STUEHUB Brand Colors - Professional, Trustworthy, Student-Friendly */
-  --background: oklch(0.985 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  /* Primary - Deep Teal (Trust, Calm, Professionalism) */
-  --primary: oklch(0.45 0.12 195);
-  --primary-foreground: oklch(0.985 0 0);
-  /* Secondary - Warm Gray */
-  --secondary: oklch(0.96 0.005 250);
-  --secondary-foreground: oklch(0.25 0 0);
-  --muted: oklch(0.96 0.005 250);
-  --muted-foreground: oklch(0.45 0 0);
-  /* Accent - Soft Orange (Warmth, Energy, Approachability) */
-  --accent: oklch(0.75 0.15 55);
-  --accent-foreground: oklch(0.2 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.9 0 0);
-  --ring: oklch(0.45 0.12 195);
-  --chart-1: oklch(0.45 0.12 195);
-  --chart-2: oklch(0.75 0.15 55);
-  --chart-3: oklch(0.65 0.1 160);
-  --chart-4: oklch(0.55 0.08 220);
-  --chart-5: oklch(0.7 0.12 30);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.45 0.12 195);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.96 0.005 250);
-  --sidebar-accent-foreground: oklch(0.25 0 0);
-  --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.45 0.12 195);
+  /* STUEHUB Brand Colors - Rich & Luxurious */
+  /* Light Mode: "Silk & Stone" - Warm, Creamy & Sophisticated */
+  --background: oklch(0.98 0.01 90);
+  /* Soft Warm Silk */
+  --foreground: oklch(0.25 0.02 265);
+  /* Dark Slate Blue */
+
+  --card: oklch(0.99 0.005 100);
+  /* Albaster Card */
+  --card-foreground: oklch(0.25 0.02 265);
+
+  --popover: oklch(0.99 0.005 100);
+  --popover-foreground: oklch(0.25 0.02 265);
+
+  /* Primary - Royal Amethyst */
+  --primary: oklch(0.55 0.15 280);
+  /* Deep Regal Purple */
+  --primary-foreground: oklch(0.98 0.01 90);
+
+  /* Secondary - Soft Sand */
+  --secondary: oklch(0.96 0.02 95);
+  --secondary-foreground: oklch(0.25 0.02 265);
+
+  --muted: oklch(0.95 0.02 95);
+  --muted-foreground: oklch(0.5 0.04 265);
+
+  /* Accent - Burnished Gold */
+  --accent: oklch(0.75 0.15 70);
+  /* Rich Gold/Amber */
+  --accent-foreground: oklch(0.25 0.02 265);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.92 0.01 95);
+  --input: oklch(0.92 0.01 95);
+  --ring: oklch(0.55 0.15 280);
+
+  --radius: 0.75rem;
+
+  --sidebar: oklch(0.98 0.01 90);
+  --sidebar-foreground: oklch(0.25 0.02 265);
+  --sidebar-primary: oklch(0.55 0.15 280);
+  --sidebar-primary-foreground: oklch(0.98 0.01 90);
+  --sidebar-accent: oklch(0.96 0.02 95);
+  --sidebar-accent-foreground: oklch(0.25 0.02 265);
+  --sidebar-border: oklch(0.92 0.01 95);
+  --sidebar-ring: oklch(0.55 0.15 280);
+
+  /* Charts - Sophisticated Tones */
+  --chart-1: oklch(0.55 0.15 280);
+  --chart-2: oklch(0.75 0.15 70);
+  --chart-3: oklch(0.4 0.1 200);
+  /* Teal */
+  --chart-4: oklch(0.7 0.15 20);
+  /* Rusty Red */
+  --chart-5: oklch(0.6 0.1 150);
+  /* Forest */
 }
 
 .dark {
-  --background: oklch(0.13 0.01 250);
-  --foreground: oklch(0.96 0 0);
-  --card: oklch(0.17 0.01 250);
-  --card-foreground: oklch(0.96 0 0);
-  --popover: oklch(0.17 0.01 250);
-  --popover-foreground: oklch(0.96 0 0);
-  --primary: oklch(0.55 0.14 195);
-  --primary-foreground: oklch(0.13 0 0);
-  --secondary: oklch(0.22 0.01 250);
-  --secondary-foreground: oklch(0.96 0 0);
-  --muted: oklch(0.22 0.01 250);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.7 0.14 55);
-  --accent-foreground: oklch(0.13 0 0);
-  --destructive: oklch(0.5 0.2 27);
-  --destructive-foreground: oklch(0.96 0 0);
-  --border: oklch(0.28 0.01 250);
-  --input: oklch(0.28 0.01 250);
-  --ring: oklch(0.55 0.14 195);
-  --sidebar: oklch(0.17 0.01 250);
-  --sidebar-foreground: oklch(0.96 0 0);
-  --sidebar-primary: oklch(0.55 0.14 195);
-  --sidebar-primary-foreground: oklch(0.13 0 0);
-  --sidebar-accent: oklch(0.22 0.01 250);
-  --sidebar-accent-foreground: oklch(0.96 0 0);
-  --sidebar-border: oklch(0.28 0.01 250);
-  --sidebar-ring: oklch(0.55 0.14 195);
+  /* Dark Mode: "Midnight Sapphire" - Deep, Rich & Velvety */
+  --background: oklch(0.15 0.03 265);
+  /* Deep Navy */
+  --foreground: oklch(0.95 0.01 265);
+  /* Soft Platinum */
+
+  --card: oklch(0.2 0.04 265);
+  /* Slightly lighter Navy */
+  --card-foreground: oklch(0.95 0.01 265);
+
+  --popover: oklch(0.2 0.04 265);
+  --popover-foreground: oklch(0.95 0.01 265);
+
+  /* Primary - Electric Violet Glow */
+  --primary: oklch(0.65 0.18 290);
+  --primary-foreground: oklch(0.1 0.02 265);
+
+  /* Secondary - Midnight Steel */
+  --secondary: oklch(0.25 0.04 265);
+  --secondary-foreground: oklch(0.95 0.01 265);
+
+  --muted: oklch(0.25 0.04 265);
+  --muted-foreground: oklch(0.7 0.04 265);
+
+  /* Accent - Teal/Cyan Vibrance */
+  --accent: oklch(0.75 0.15 190);
+  --accent-foreground: oklch(0.1 0.02 265);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.3 0.04 265);
+  --input: oklch(0.3 0.04 265);
+  --ring: oklch(0.65 0.18 290);
+
+  --sidebar: oklch(0.15 0.03 265);
+  --sidebar-foreground: oklch(0.95 0.01 265);
+  --sidebar-primary: oklch(0.65 0.18 290);
+  --sidebar-primary-foreground: oklch(0.1 0.02 265);
+  --sidebar-accent: oklch(0.25 0.04 265);
+  --sidebar-accent-foreground: oklch(0.95 0.01 265);
+  --sidebar-border: oklch(0.3 0.04 265);
+  --sidebar-ring: oklch(0.65 0.18 290);
+
+  /* Charts - Neon & Glowing */
+  --chart-1: oklch(0.65 0.18 290);
+  --chart-2: oklch(0.75 0.15 190);
+  --chart-3: oklch(0.7 0.15 40);
+  --chart-4: oklch(0.6 0.15 140);
+  --chart-5: oklch(0.8 0.1 85);
 }
 
 @theme inline {
@@ -124,13 +168,13 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary subpixel-antialiased;
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary subpixel-antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
-  /* Premium Scrollbar */
+  /* Premium Glass Scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -138,10 +182,10 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40 transition-colors;
+    @apply bg-muted-foreground/10 backdrop-blur-md rounded-full hover:bg-muted-foreground/30 transition-all duration-300;
   }
 
-  /* Animations */
+  /* Refined Animations */
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -157,26 +201,25 @@
   }
 
   .animate-gradient {
-    animation: gradient 8s ease infinite;
-    background-size: 300% 300%;
+    animation: gradient 12s ease infinite;
+    background-size: 200% 200%;
   }
 
   @keyframes float {
-    0% {
+
+    0%,
+    100% {
       transform: translateY(0px);
     }
 
     50% {
-      transform: translateY(-20px);
-    }
-
-    100% {
-      transform: translateY(0px);
+      transform: translateY(-15px);
     }
   }
 
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+    animation: float 8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
 
   @keyframes blob {
@@ -198,7 +241,10 @@
   }
 
   .animate-blob {
-    animation: blob 7s infinite;
+    will-change: transform;
+    animation: blob 15s infinite;
+    filter: blur(40px);
+    opacity: 0.7;
   }
 
   .animation-delay-2000 {
@@ -222,8 +268,8 @@
     }
 
     50% {
-      transform: translateY(0%) rotate(35deg) scale(1.1);
-      opacity: 0.5;
+      transform: translateY(0%) rotate(35deg) scale(1.05);
+      opacity: 0.4;
     }
 
     100% {
@@ -233,7 +279,8 @@
   }
 
   .animate-beam {
-    animation: beam 15s ease-in-out infinite;
+    will-change: transform;
+    animation: beam 12s ease-in-out infinite;
   }
 
   @keyframes beam-horizontal {
@@ -247,34 +294,37 @@
   }
 
   .animate-beam-horizontal {
-    animation: beam-horizontal 20s linear infinite alternate;
+    will-change: transform;
+    animation: beam-horizontal 15s linear infinite alternate;
   }
 
   @keyframes orbit-cw {
     0% {
-      transform: rotate(0deg) translateX(150px) rotate(0deg);
+      transform: rotate(0deg) translateX(120px) rotate(0deg);
     }
 
     100% {
-      transform: rotate(360deg) translateX(150px) rotate(-360deg);
+      transform: rotate(360deg) translateX(120px) rotate(-360deg);
     }
   }
 
   .animate-orbit-cw {
+    will-change: transform;
     animation: orbit-cw 20s linear infinite;
   }
 
   @keyframes orbit-ccw {
     0% {
-      transform: rotate(0deg) translateX(150px) rotate(0deg);
+      transform: rotate(0deg) translateX(120px) rotate(0deg);
     }
 
     100% {
-      transform: rotate(-360deg) translateX(150px) rotate(360deg);
+      transform: rotate(-360deg) translateX(120px) rotate(360deg);
     }
   }
 
   .animate-orbit-ccw {
+    will-change: transform;
     animation: orbit-ccw 25s linear infinite;
   }
 
@@ -297,6 +347,7 @@
   }
 
   .animate-float-complex {
-    animation: float-complex 8s ease-in-out infinite;
+    will-change: transform;
+    animation: float-complex 10s ease-in-out infinite;
   }
 }

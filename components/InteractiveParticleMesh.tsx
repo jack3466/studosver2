@@ -35,7 +35,7 @@ export function InteractiveParticleMesh() {
         let height = 0
 
         // Configuration
-        const particleSpacing = 80 // Reduced density for performance (was 45)
+        const particleSpacing = 100 // Reduced density for performance (was 45)
         const interactionRadius = 300 // Adjusted for sparser mesh
         const returnSpeed = 0.08
         const repulsionStrength = 8

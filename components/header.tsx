@@ -32,11 +32,11 @@ export function Header() {
 
         {/* --- LEFT: LOGO --- */}
         <div className="pointer-events-auto">
-          <Link href="/" className="flex items-center gap-1 p-2 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/10 transition-colors">
+          <Link href="/" className="flex items-center gap-1 p-2 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/10 transition-colors md:bg-white/10 md:backdrop-blur-3xl md:border-white/20 md:shadow-2xl md:hover:bg-white/20 md:hover:scale-105 md:duration-500 md:ease-out md:ring-1 md:ring-white/30">
             <img
               src="/logo.png"
               alt="STUEHUB"
-              className="h-14 md:h-20 w-auto object-contain"
+              className="h-14 md:h-20 w-auto object-contain drop-shadow-xl"
             />
           </Link>
         </div>
