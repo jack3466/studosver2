@@ -123,13 +123,13 @@ export function HeroSection() {
               style={{ x: xFast, y: yFast }}
               className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000 fill-mode-backwards"
             >
-              <MagneticButton asChild size="lg" strength={0.4} className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
+              <MagneticButton asChild size="lg" strength={0.4} className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 rounded-full">
                 <Link href="/services">
                   Explore Services
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </MagneticButton>
-              <MagneticButton asChild variant="outline" size="lg" strength={0.4} className="text-lg px-8 h-14 backdrop-blur-sm border-white/10 hover:bg-white/10">
+              <MagneticButton asChild variant="outline" size="lg" strength={0.4} className="text-lg px-8 h-14 backdrop-blur-sm border-white/10 hover:bg-white/10 rounded-full">
                 <Link href="/contact">Get Assistance</Link>
               </MagneticButton>
             </motion.div>

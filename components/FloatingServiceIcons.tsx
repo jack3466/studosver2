@@ -7,7 +7,7 @@ import {
 
 export function FloatingServiceIcons() {
     return (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+        <div className="hidden md:block absolute inset-0 pointer-events-none overflow-hidden -z-10">
 
             {/* --- BACKGROUND LAYER (Blurred, Slow, Small) --- */}
             <div className="absolute top-[10%] left-[10%] animate-float-complex opacity-40 blur-[1px]">

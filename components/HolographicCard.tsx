@@ -51,19 +51,19 @@ export function HolographicCard({ children, className }: { children: React.React
                 transformStyle: "preserve-3d",
             }}
             className={cn(
-                "group relative rounded-xl border border-white/20 bg-white/5 backdrop-blur-[12px] overflow-hidden transition-colors hover:border-white/40",
+                "group relative rounded-3xl border border-white/20 bg-white/5 backdrop-blur-[12px] overflow-hidden transition-colors hover:border-white/40",
                 className
             )}
         >
-            <div className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100 z-10"
+            <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-10"
                 style={{
-                    background: useMotionTemplate`
+                    backgroundImage: useMotionTemplate`
                radial-gradient(
                  650px circle at ${mouseX}px ${mouseY}px,
                  rgba(255,255,255,0.1),
                  transparent 80%
                )
-             `
+             ` as any
                 }}
             />
             <div className="relative z-20 h-full">
