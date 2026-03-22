@@ -63,7 +63,7 @@ export function HeroSection() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative pt-24 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90vh] flex items-center justify-center perspective-1000"
+      className="relative pt-24 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90dvh] flex items-center justify-center perspective-1000"
     >
       {/* --- LAYER 1: BACKGROUND (Slow) --- */}
       <motion.div

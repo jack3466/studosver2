@@ -9,7 +9,7 @@ import { ScrollAnimation } from "@/components/ScrollAnimation"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-[100dvh]">
       <Header />
       <main className="space-y-24">
         <ScrollAnimation animation="fade-in">
