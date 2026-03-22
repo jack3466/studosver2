@@ -8,14 +8,17 @@ export function CTASection() {
           {/* Left: Illustration */}
           <div className="hidden lg:block relative group">
             <div className="relative h-[500px] w-full overflow-hidden rounded-2xl bg-muted/10 backdrop-blur-sm border border-white/10 shadow-2xl">
-              <img
-                src="/services/contact.png"
-                alt="Contact Support"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                width="800"
-                height="500"
-                loading="lazy"
-              />
+              <picture>
+                <source srcSet="/services/contact.webp" type="image/webp" />
+                <img
+                  src="/services/contact.png"
+                  alt="Contact Support"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                />
+              </picture>
 
               {/* Overlay Text */}
               <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-background/90 to-transparent">

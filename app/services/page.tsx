@@ -83,14 +83,17 @@ export default function ServicesPage() {
                     <CardContent className="p-0 h-full flex flex-col">
                       {/* Image Header */}
                       <div className="relative w-full h-56 overflow-hidden rounded-t-lg bg-muted/20">
-                        <img
-                          src={service.image}
-                          alt={service.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          width="400"
-                          height="224"
-                          loading="lazy"
-                        />
+                        <picture>
+                          <source srcSet={service.image.replace('.png', '.webp')} type="image/webp" />
+                          <img
+                            src={service.image}
+                            alt={service.title}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            width="400"
+                            height="224"
+                            loading="lazy"
+                          />
+                        </picture>
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                       </div>
 

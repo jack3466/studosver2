@@ -10,7 +10,10 @@ export function Footer() {
           {/* Column 1: Brand & Socials */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Home">
-              <img src="/logo.png" alt="STUEHUB" className="h-16 w-auto" width="80" height="56" loading="lazy" />
+              <picture>
+                <source srcSet="/logo.webp" type="image/webp" />
+                <img src="/logo.png" alt="STUEHUB" className="h-16 w-auto" width="80" height="56" loading="lazy" />
+              </picture>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Empowering students with clarity, support, and confidence.

@@ -32,15 +32,19 @@ export function Header() {
 
         {/* --- LEFT: LOGO --- */}
         <div className="pointer-events-auto">
-          <Link href="/" className="flex items-center gap-1 p-2 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/10 transition-colors md:bg-white/10 md:backdrop-blur-3xl md:border-white/20 md:shadow-2xl md:hover:bg-white/20 md:hover:scale-105 md:duration-500 md:ease-out md:ring-1 md:ring-white/30">
-            <img
-              src="/logo.png"
-              alt="STUEHUB"
-              className="h-14 md:h-20 w-auto object-contain drop-shadow-xl"
-              width="80"
-              height="56"
-              fetchPriority="high"
-            />
+          <Link href="/" className="flex items-center gap-1 p-2 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 md:bg-white/10 md:backdrop-blur-xl md:border-white/20 md:shadow-xl md:hover:bg-white/20 md:transition-all md:duration-300 md:ease-out md:ring-1 md:ring-white/30">
+            <picture>
+              <source srcSet="/logo.webp" type="image/webp" />
+              <img
+                src="/logo.png"
+                alt="STUEHUB"
+                className="h-14 md:h-20 w-auto object-contain"
+                width="80"
+                height="56"
+                fetchPriority="high"
+                loading="eager"
+              />
+            </picture>
           </Link>
         </div>
 

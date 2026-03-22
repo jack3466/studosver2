@@ -190,24 +190,19 @@
     @apply bg-muted-foreground/10 backdrop-blur-md rounded-full hover:bg-muted-foreground/30 transition-all duration-300;
   }
 
-  /* Refined Animations */
+  /* Refined Animations - GPU Accelerated */
   @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
+    0%, 100% {
+      opacity: 1;
     }
-
     50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
+      opacity: 0.85;
     }
   }
 
   .animate-gradient {
-    animation: gradient 12s ease infinite;
-    background-size: 200% 200%;
+    animation: gradient 4s ease-in-out infinite;
+    will-change: opacity;
   }
 
   @keyframes float {

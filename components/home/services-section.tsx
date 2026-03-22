@@ -76,14 +76,17 @@ export function ServicesSection() {
                     {/* Image Header */}
                     <div className="relative w-full h-48 overflow-hidden bg-muted/20">
                       <ParallaxImage intensity={10} className="w-full h-full">
-                        <img
-                          src={service.image}
-                          alt={service.title}
-                          className="w-full h-full object-cover transition-transform duration-500 scale-105"
-                          width="400"
-                          height="200"
-                          loading="lazy"
-                        />
+                        <picture>
+                          <source srcSet={service.image.replace('.png', '.webp')} type="image/webp" />
+                          <img
+                            src={service.image}
+                            alt={service.title}
+                            className="w-full h-full object-cover transition-transform duration-500 scale-105"
+                            width="400"
+                            height="200"
+                            loading="lazy"
+                          />
+                        </picture>
                       </ParallaxImage>
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
                     </div>

@@ -72,13 +72,17 @@ export function HeroSection() {
       >
         <MeshGradient />
         <div className="absolute inset-0 z-0">
-          <img
-            src="/hero-glass.png"
-            alt="Abstract Glass Background"
-            className="w-full h-full object-cover opacity-30 dark:opacity-20 blur-[2px]"
-            width="1920"
-            height="1080"
-          />
+          <picture>
+            <source srcSet="/hero-glass.webp" type="image/webp" />
+            <img
+              src="/hero-glass.png"
+              alt="Abstract Glass Background"
+              className="w-full h-full object-cover opacity-30 dark:opacity-20 blur-[2px]"
+              width="1920"
+              height="1080"
+              decoding="async"
+            />
+          </picture>
           <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
         </div>
         <AnimatedGridPattern className="opacity-10 absolute inset-0 z-0 mix-blend-overlay" />
