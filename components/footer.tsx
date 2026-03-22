@@ -9,20 +9,20 @@ export function Footer() {
 
           {/* Column 1: Brand & Socials */}
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="STUEHUB" className="h-16 w-auto" />
+            <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Home">
+              <img src="/logo.png" alt="STUEHUB" className="h-16 w-auto" width="80" height="56" loading="lazy" />
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Empowering students with clarity, support, and confidence.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://www.instagram.com/stuehub?utm_source=qr&igsh=bnpwdDBiaXl3ZTBs" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.instagram.com/stuehub?utm_source=qr&igsh=bnpwdDBiaXl3ZTBs" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="mailto:stuehub@gmail.com" className="text-muted-foreground hover:text-primary">
+              <Link href="mailto:stuehub@gmail.com" className="text-muted-foreground hover:text-primary" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </Link>
             </div>

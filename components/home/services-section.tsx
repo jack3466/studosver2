@@ -80,6 +80,9 @@ export function ServicesSection() {
                           src={service.image}
                           alt={service.title}
                           className="w-full h-full object-cover transition-transform duration-500 scale-105"
+                          width="400"
+                          height="200"
+                          loading="lazy"
                         />
                       </ParallaxImage>
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />

@@ -42,7 +42,7 @@ export function ServicePageLayout({
               {image ? (
                 <div className="mx-auto h-40 w-40 md:h-56 md:w-56 mb-8 relative animate-in fade-in zoom-in duration-700">
                   <ParallaxImage intensity={30} className="w-full h-full">
-                    <img src={image} alt={title} className="w-full h-full object-contain drop-shadow-2xl" />
+                    <img src={image} alt={title} className="w-full h-full object-contain drop-shadow-2xl" width="224" height="224" loading="lazy" />
                   </ParallaxImage>
                 </div>
               ) : (

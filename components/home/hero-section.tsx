@@ -76,6 +76,8 @@ export function HeroSection() {
             src="/hero-glass.png"
             alt="Abstract Glass Background"
             className="w-full h-full object-cover opacity-30 dark:opacity-20 blur-[2px]"
+            width="1920"
+            height="1080"
           />
           <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
         </div>

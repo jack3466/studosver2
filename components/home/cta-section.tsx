@@ -12,6 +12,9 @@ export function CTASection() {
                 src="/services/contact.png"
                 alt="Contact Support"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                width="800"
+                height="500"
+                loading="lazy"
               />
 
               {/* Overlay Text */}

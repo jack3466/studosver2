@@ -37,6 +37,9 @@ export function Header() {
               src="/logo.png"
               alt="STUEHUB"
               className="h-14 md:h-20 w-auto object-contain drop-shadow-xl"
+              width="80"
+              height="56"
+              fetchPriority="high"
             />
           </Link>
         </div>
@@ -84,6 +87,7 @@ export function Header() {
             type="button"
             className="md:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

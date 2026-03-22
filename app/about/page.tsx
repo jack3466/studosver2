@@ -232,6 +232,9 @@ export default function AboutPage() {
                       src="/founder.jpg"
                       alt="Siva Sai Krishna Sankurathri"
                       className="h-16 w-16 rounded-full object-cover border-2 border-primary"
+                      width="64"
+                      height="64"
+                      loading="lazy"
                     />
                     <div>
                       <p className="font-semibold text-lg text-foreground">Siva Sai Krishna Sankurathri</p>
