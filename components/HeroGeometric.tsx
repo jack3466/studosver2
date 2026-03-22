@@ -12,8 +12,8 @@ function ElegantShape({
 }: {
     className?: string
     delay?: number
-    width?: number
-    height?: number
+    width?: number | string
+    height?: number | string
     rotate?: number
     gradient?: string
 }) {
@@ -24,8 +24,8 @@ function ElegantShape({
                 className
             )}
             style={{
-                width,
-                height,
+                width: typeof width === 'number' ? `min(${width}px, 80vw)` : width,
+                height: typeof height === 'number' ? `min(${height}px, 30vw)` : height,
             }}
         >
             <div

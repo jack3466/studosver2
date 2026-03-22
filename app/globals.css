@@ -170,6 +170,8 @@
   body {
     @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary subpixel-antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   /* Premium Glass Scrollbar */
