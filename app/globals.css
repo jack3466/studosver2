@@ -8,105 +8,113 @@
   /* Light Mode: "Silk & Stone" - Warm, Creamy & Sophisticated */
   --background: oklch(0.98 0.01 90);
   /* Soft Warm Silk */
-  --foreground: oklch(0.1 0 0);
-  /* Stark Black */
+  --foreground: oklch(0.25 0.02 265);
+  /* Dark Slate Blue */
 
-  --card: oklch(1 0 0);
-  /* Pure White Card */
-  --card-foreground: oklch(0.1 0 0);
+  --card: oklch(0.99 0.005 100);
+  /* Albaster Card */
+  --card-foreground: oklch(0.25 0.02 265);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.1 0 0);
+  --popover: oklch(0.99 0.005 100);
+  --popover-foreground: oklch(0.25 0.02 265);
 
-  /* Primary - Royal Amethyst -> Electric Violet */
-  --primary: oklch(0.6 0.2 300);
+  /* Primary - Royal Amethyst */
+  --primary: oklch(0.55 0.15 280);
+  /* Deep Regal Purple */
   --primary-foreground: oklch(0.98 0.01 90);
 
   /* Secondary - Soft Sand */
   --secondary: oklch(0.96 0.02 95);
-  --secondary-foreground: oklch(0.1 0 0);
+  --secondary-foreground: oklch(0.25 0.02 265);
 
-  --muted: oklch(0.94 0.01 95);
-  --muted-foreground: oklch(0.4 0 0);
+  --muted: oklch(0.95 0.02 95);
+  --muted-foreground: oklch(0.5 0.04 265);
 
-  /* Accent - Cyan */
-  --accent: oklch(0.75 0.15 190);
-  --accent-foreground: oklch(0.1 0 0);
+  /* Accent - Burnished Gold */
+  --accent: oklch(0.75 0.15 70);
+  /* Rich Gold/Amber */
+  --accent-foreground: oklch(0.25 0.02 265);
 
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.9 0 0);
-  --ring: oklch(0.6 0.2 300);
+  --border: oklch(0.92 0.01 95);
+  --input: oklch(0.92 0.01 95);
+  --ring: oklch(0.55 0.15 280);
 
   --radius: 0.75rem;
 
   --sidebar: oklch(0.98 0.01 90);
-  --sidebar-foreground: oklch(0.1 0 0);
-  --sidebar-primary: oklch(0.6 0.2 300);
+  --sidebar-foreground: oklch(0.25 0.02 265);
+  --sidebar-primary: oklch(0.55 0.15 280);
   --sidebar-primary-foreground: oklch(0.98 0.01 90);
   --sidebar-accent: oklch(0.96 0.02 95);
-  --sidebar-accent-foreground: oklch(0.1 0 0);
-  --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.6 0.2 300);
+  --sidebar-accent-foreground: oklch(0.25 0.02 265);
+  --sidebar-border: oklch(0.92 0.01 95);
+  --sidebar-ring: oklch(0.55 0.15 280);
 
   /* Charts - Sophisticated Tones */
-  --chart-1: oklch(0.6 0.2 300);
-  --chart-2: oklch(0.75 0.15 190);
+  --chart-1: oklch(0.55 0.15 280);
+  --chart-2: oklch(0.75 0.15 70);
   --chart-3: oklch(0.4 0.1 200);
+  /* Teal */
   --chart-4: oklch(0.7 0.15 20);
+  /* Rusty Red */
   --chart-5: oklch(0.6 0.1 150);
+  /* Forest */
 }
 
 .dark {
-  /* Dark Mode: "Void & Neon" - Pitch Black OLED & Starlight */
-  --background: oklch(0.01 0 0); /* True Black */
-  --foreground: oklch(0.98 0 0); /* Stark White */
+  /* Dark Mode: "Midnight Sapphire" - Deep, Rich & Velvety */
+  --background: oklch(0.15 0.03 265);
+  /* Deep Navy */
+  --foreground: oklch(0.95 0.01 265);
+  /* Soft Platinum */
 
-  --card: oklch(0.05 0 0); /* Barely Visible Card */
-  --card-foreground: oklch(0.98 0 0); 
+  --card: oklch(0.2 0.04 265);
+  /* Slightly lighter Navy */
+  --card-foreground: oklch(0.95 0.01 265);
 
-  --popover: oklch(0.05 0 0);
-  --popover-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.2 0.04 265);
+  --popover-foreground: oklch(0.95 0.01 265);
 
-  /* Primary - Hyper Neon Violet Glow */
-  --primary: oklch(0.7 0.25 300);
-  --primary-foreground: oklch(0.02 0 0);
+  /* Primary - Electric Violet Glow */
+  --primary: oklch(0.65 0.18 290);
+  --primary-foreground: oklch(0.1 0.02 265);
 
-  /* Secondary - Deep Space */
-  --secondary: oklch(0.1 0 0);
-  --secondary-foreground: oklch(0.98 0 0);
+  /* Secondary - Midnight Steel */
+  --secondary: oklch(0.25 0.04 265);
+  --secondary-foreground: oklch(0.95 0.01 265);
 
-  --muted: oklch(0.1 0 0);
-  --muted-foreground: oklch(0.6 0 0);
+  --muted: oklch(0.25 0.04 265);
+  --muted-foreground: oklch(0.7 0.04 265);
 
-  /* Accent - Electric Teal/Cyan Vibrance */
-  --accent: oklch(0.8 0.2 190);
-  --accent-foreground: oklch(0.02 0 0);
+  /* Accent - Teal/Cyan Vibrance */
+  --accent: oklch(0.75 0.15 190);
+  --accent-foreground: oklch(0.1 0.02 265);
 
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(0.15 0 0);
-  --input: oklch(0.15 0 0);
-  --ring: oklch(0.7 0.25 300);
+  --border: oklch(0.3 0.04 265);
+  --input: oklch(0.3 0.04 265);
+  --ring: oklch(0.65 0.18 290);
 
-  --sidebar: oklch(0.02 0 0);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.7 0.25 300);
-  --sidebar-primary-foreground: oklch(0.02 0 0);
-  --sidebar-accent: oklch(0.1 0 0);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.15 0 0);
-  --sidebar-ring: oklch(0.7 0.25 300);
+  --sidebar: oklch(0.15 0.03 265);
+  --sidebar-foreground: oklch(0.95 0.01 265);
+  --sidebar-primary: oklch(0.65 0.18 290);
+  --sidebar-primary-foreground: oklch(0.1 0.02 265);
+  --sidebar-accent: oklch(0.25 0.04 265);
+  --sidebar-accent-foreground: oklch(0.95 0.01 265);
+  --sidebar-border: oklch(0.3 0.04 265);
+  --sidebar-ring: oklch(0.65 0.18 290);
 
-  /* Charts - Glowing Neon */
-  --chart-1: oklch(0.7 0.25 300);
-  --chart-2: oklch(0.8 0.2 190);
-  --chart-3: oklch(0.8 0.2 140);
-  --chart-4: oklch(0.7 0.2 40);
-  --chart-5: oklch(0.85 0.15 85);
+  /* Charts - Neon & Glowing */
+  --chart-1: oklch(0.65 0.18 290);
+  --chart-2: oklch(0.75 0.15 190);
+  --chart-3: oklch(0.7 0.15 40);
+  --chart-4: oklch(0.6 0.15 140);
+  --chart-5: oklch(0.8 0.1 85);
 }
 
 @theme inline {
