@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { MagneticButton } from "@/components/MagneticButton"
 import { HeroGeometric } from "@/components/HeroGeometric"
 import { AnimatedGridPattern } from "@/components/AnimatedGridPattern"
 import { FloatingServiceIcons } from "@/components/FloatingServiceIcons"
@@ -72,15 +71,15 @@ export function HeroSection() {
 
             {/* --- LAYER 3: BUTTONS --- */}
             <div className="mt-10 md:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 relative z-20 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700 fill-mode-backwards">
-              <MagneticButton asChild size="lg" strength={0.4} className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 rounded-full transition-all">
+              <Button asChild size="lg" className="text-lg px-8 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 rounded-full transition-all hover:scale-105 active:scale-95">
                 <Link href="/services">
                   Explore Services
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-              </MagneticButton>
-              <MagneticButton asChild variant="outline" size="lg" strength={0.4} className="text-lg px-8 h-14 bg-white/5 backdrop-blur-md border-white/20 hover:bg-white/10 rounded-full transition-all">
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 h-14 bg-black/5 dark:bg-white/5 backdrop-blur-md border-black/10 dark:border-white/20 hover:bg-black/10 dark:hover:bg-white/10 text-foreground rounded-full transition-all hover:scale-105 active:scale-95">
                 <Link href="/contact">Get Assistance</Link>
-              </MagneticButton>
+              </Button>
             </div>
           </div>
         </div>

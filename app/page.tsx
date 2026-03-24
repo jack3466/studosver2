@@ -1,12 +1,16 @@
+import dynamic from "next/dynamic"
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/home/hero-section"
-import { VisionMissionSection } from "@/components/home/vision-mission-section"
-import { ServicesSection } from "@/components/home/services-section"
-import { WhySection } from "@/components/home/why-section"
-import { CTASection } from "@/components/home/cta-section"
-import { ReviewsSection } from "@/components/home/reviews-section"
 import { ScrollAnimation } from "@/components/ScrollAnimation"
+
+// --- LAZY LOADED COMPONENTS (Below Fold) ---
+const VisionMissionSection = dynamic(() => import("@/components/home/vision-mission-section").then(mod => mod.VisionMissionSection), { ssr: true })
+const ServicesSection = dynamic(() => import("@/components/home/services-section").then(mod => mod.ServicesSection), { ssr: true })
+const WhySection = dynamic(() => import("@/components/home/why-section").then(mod => mod.WhySection), { ssr: true })
+const ReviewsSection = dynamic(() => import("@/components/home/reviews-section").then(mod => mod.ReviewsSection), { ssr: true })
+const CTASection = dynamic(() => import("@/components/home/cta-section").then(mod => mod.CTASection), { ssr: true })
+const Footer = dynamic(() => import("@/components/footer").then(mod => mod.Footer), { ssr: true })
+
 export default function HomePage() {
   return (
     <div className="min-[100dvh]">

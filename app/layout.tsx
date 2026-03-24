@@ -5,9 +5,16 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { CustomCursor } from "@/components/CustomCursor"
-import { NoiseOverlay } from "@/components/NoiseOverlay"
 import { SmoothScroll } from "@/components/SmoothScroll"
-import { InteractiveParticleMesh } from "@/components/InteractiveParticleMesh"
+import dynamic from "next/dynamic"
+
+const InteractiveParticleMesh = dynamic(
+  () => import("@/components/InteractiveParticleMesh").then(mod => mod.InteractiveParticleMesh)
+)
+
+const NoiseOverlay = dynamic(
+  () => import("@/components/NoiseOverlay").then(mod => mod.NoiseOverlay)
+)
 
 // 1. Setup fonts with CSS variables for Tailwind
 const outfit = Outfit({
