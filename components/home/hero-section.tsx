@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { ScrambleText } from "@/components/ScrambleText"
 import { MagneticButton } from "@/components/MagneticButton"
 import { HeroGeometric } from "@/components/HeroGeometric"
 import { AnimatedGridPattern } from "@/components/AnimatedGridPattern"
@@ -11,65 +10,12 @@ import { FloatingServiceIcons } from "@/components/FloatingServiceIcons"
 import { ScrollDownIndicator } from "@/components/ScrollDownIndicator"
 import { HeroBackgroundOrbs } from "@/components/HeroBackgroundOrbs"
 import { MeshGradient } from "@/components/MeshGradient"
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
-import { useEffect, useRef } from "react"
-import { cn } from "@/lib/utils"
 
 export function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  // Mouse position (center relative)
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  // Smooth spring physics
-  const springConfig = { damping: 25, stiffness: 100 }
-  const springX = useSpring(x, springConfig)
-  const springY = useSpring(y, springConfig)
-
-  // Parallax layers (Slow, Medium, Fast)
-  const xBack = useTransform(springX, [-1, 1], [-10, 10]) // Background moves opposite
-  const yBack = useTransform(springY, [-1, 1], [-5, 5])
-
-  const xMid = useTransform(springX, [-1, 1], [-20, 20]) // Text
-  const yMid = useTransform(springY, [-1, 1], [-10, 10])
-
-  const xFast = useTransform(springX, [-1, 1], [-40, 40]) // Floating elements
-  const yFast = useTransform(springY, [-1, 1], [-20, 20])
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!containerRef.current) return
-
-    // Disable parallax on mobile/tablet (touch devices)
-    if (typeof window !== 'undefined' && window.matchMedia('(hover: none), (max-width: 1024px)').matches) return
-
-    const { width, height, left, top } = containerRef.current.getBoundingClientRect()
-
-    // Normalized coordinates (-1 to 1)
-    const normX = ((e.clientX - left) / width) * 2 - 1
-    const normY = ((e.clientY - top) / height) * 2 - 1
-
-    x.set(normX)
-    y.set(normY)
-  }
-
-  const handleMouseLeave = () => {
-    x.set(0)
-    y.set(0)
-  }
-
   return (
-    <section
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="relative pt-24 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90dvh] flex items-center justify-center perspective-1000"
-    >
-      {/* --- LAYER 1: BACKGROUND (Slow) --- */}
-      <motion.div
-        style={{ x: xBack, y: yBack }}
-        className="absolute inset-0 z-0 scale-110" // scale up to prevent edges showing
-      >
+    <section className="relative pt-24 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90dvh] flex items-center justify-center">
+      {/* --- LAYER 1: BACKGROUND --- */}
+      <div className="absolute inset-0 z-0">
         <MeshGradient />
         <div className="absolute inset-0 z-0">
           <picture>
@@ -88,62 +34,60 @@ export function HeroSection() {
         <AnimatedGridPattern className="opacity-10 absolute inset-0 z-0 mix-blend-overlay" />
         <HeroBackgroundOrbs />
         <HeroGeometric />
-      </motion.div>
+      </div>
 
       <FloatingServiceIcons />
 
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full">
-
-        {/* --- LAYER 2: TEXT CONTENT (Medium) --- */}
-        <motion.div
-          style={{ x: xMid, y: yMid, z: 10 }}
-          className="mx-auto max-w-4xl text-center relative z-20"
-        >
-          {/* Glass Card Container (Optional wrapper, or just text) */}
-          <div className="relative rounded-3xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 p-5 md:p-8 backdrop-blur-xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-4 overflow-hidden group">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full animate-in fade-in duration-1000 ease-out">
+        {/* --- LAYER 2: TEXT CONTENT --- */}
+        <div className="mx-auto max-w-4xl text-center relative z-20">
+          {/* Glass Card Container */}
+          <div className="relative rounded-3xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 p-5 md:p-8 md:py-12 backdrop-blur-xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 overflow-hidden group">
 
             {/* Holographic Shimmer Effect */}
             <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent z-0 pointer-events-none" />
 
-            <div className="relative z-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100 fill-mode-backwards">
-              <p className="text-sm font-semibold text-primary mb-6 tracking-widest uppercase bg-primary/10 py-1 px-3 rounded-full inline-block">
+            {/* Content Display */}
+            <div className="relative z-10 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 fill-mode-backwards">
+              <p className="text-sm font-semibold text-primary mb-6 tracking-widest uppercase bg-primary/10 py-1.5 px-4 rounded-full inline-block backdrop-blur-sm border border-primary/20">
                 Made for Student Needs
               </p>
             </div>
 
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl text-balance h-auto mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-backwards">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary animate-gradient pb-2">
-                <ScrambleText text="Who We Are" duration={3000} className="" />
+            <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl lg:text-[6.5rem] text-balance h-auto mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-backwards">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary animate-gradient pb-2 inline-block">
+                Who We Are
               </span>
             </h1>
-            <p className="mt-2 text-lg text-muted-foreground italic animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-backwards">
-              We are not just a service center. We are a support system for students.
+
+            <p className="mt-2 text-xl md:text-2xl font-medium text-foreground/80 tracking-wide animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-backwards">
+              We are not just a service center. <br className="hidden sm:block" />
+              We are a support system for students.
             </p>
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-backwards">
+            
+            <p className="mt-6 text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-backwards">
               At STUEHUB, we understand the confusion, pressure, and uncertainty students face. We stand beside you — step by step.
             </p>
 
-            {/* --- LAYER 3: BUTTONS (Fast) --- */}
-            <motion.div
-              style={{ x: xFast, y: yFast }}
-              className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000 fill-mode-backwards"
-            >
-              <MagneticButton asChild size="lg" strength={0.4} className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 rounded-full">
+            {/* --- LAYER 3: BUTTONS --- */}
+            <div className="mt-10 md:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 relative z-20 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700 fill-mode-backwards">
+              <MagneticButton asChild size="lg" strength={0.4} className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 rounded-full transition-all">
                 <Link href="/services">
                   Explore Services
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </MagneticButton>
-              <MagneticButton asChild variant="outline" size="lg" strength={0.4} className="text-lg px-8 h-14 backdrop-blur-sm border-white/10 hover:bg-white/10 rounded-full">
+              <MagneticButton asChild variant="outline" size="lg" strength={0.4} className="text-lg px-8 h-14 bg-white/5 backdrop-blur-md border-white/20 hover:bg-white/10 rounded-full transition-all">
                 <Link href="/contact">Get Assistance</Link>
               </MagneticButton>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
 
       </div>
       <ScrollDownIndicator />
     </section>
   )
 }
+
