@@ -5,8 +5,8 @@ import { VisionMissionSection } from "@/components/home/vision-mission-section"
 import { ServicesSection } from "@/components/home/services-section"
 import { WhySection } from "@/components/home/why-section"
 import { CTASection } from "@/components/home/cta-section"
+import { ReviewsSection } from "@/components/home/reviews-section"
 import { ScrollAnimation } from "@/components/ScrollAnimation"
-
 export default function HomePage() {
   return (
     <div className="min-[100dvh]">
@@ -26,6 +26,10 @@ export default function HomePage() {
 
         <ScrollAnimation animation="fade-up">
           <WhySection />
+        </ScrollAnimation>
+
+        <ScrollAnimation animation="fade-up">
+          <ReviewsSection />
         </ScrollAnimation>
 
         <ScrollAnimation animation="fade-in" delay={300}>

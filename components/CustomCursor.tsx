@@ -74,7 +74,7 @@ export function CustomCursor() {
                     <>
                         {/* Main Dot - Instantly tracks mouse */}
                         <motion.div
-                            className="fixed top-0 left-0 w-3 h-3 bg-primary rounded-full pointer-events-none z-[9999] mix-blend-difference"
+                            className="fixed top-0 left-0 w-3 h-3 bg-white rounded-full pointer-events-none z-[10000] mix-blend-difference"
                             style={{
                                 x: mouseX,
                                 y: mouseY,
@@ -93,10 +93,10 @@ export function CustomCursor() {
                                 translateY: "-50%"
                             }}
                             animate={{
-                                width: isHovering ? 48 : 32,
-                                height: isHovering ? 48 : 32,
-                                borderColor: isHovering ? "color-mix(in srgb, var(--primary), transparent 50%)" : "color-mix(in srgb, var(--primary), transparent 70%)",
-                                backgroundColor: isHovering ? "color-mix(in srgb, var(--primary), transparent 90%)" : "transparent",
+                                width: isHovering ? 64 : 40,
+                                height: isHovering ? 64 : 40,
+                                borderColor: isHovering ? "color-mix(in srgb, var(--primary), transparent 40%)" : "color-mix(in srgb, var(--primary), transparent 70%)",
+                                backgroundColor: isHovering ? "color-mix(in srgb, var(--primary), transparent 85%)" : "transparent",
                                 scale: isClicking ? 0.75 : 1
                             }}
                             transition={{

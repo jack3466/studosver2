@@ -112,15 +112,16 @@ export function HeroSection() {
               </p>
             </div>
 
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl text-balance h-auto mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-backwards">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary animate-gradient pb-2">
+            <h1 className="text-5xl font-extrabold tracking-tighter sm:text-7xl lg:text-[9rem] xl:text-[10rem] lg:leading-[0.85] text-balance h-auto mb-8 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300 fill-mode-backwards">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary animate-gradient pb-6 block">
                 <ScrambleText text="Who We Are" duration={3000} className="" />
               </span>
             </h1>
-            <p className="mt-2 text-lg text-muted-foreground italic animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-backwards">
-              We are not just a service center. We are a support system for students.
+            <p className="mt-4 text-lg sm:text-2xl font-light text-foreground/80 tracking-wide animate-in fade-in slide-in-from-bottom-12 duration-1200 delay-500 fill-mode-backwards">
+              We are not just a service center. <br className="hidden sm:block" />
+              We are a support system for students.
             </p>
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-backwards">
+            <p className="mt-6 text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-12 duration-1200 delay-700 fill-mode-backwards">
               At STUEHUB, we understand the confusion, pressure, and uncertainty students face. We stand beside you — step by step.
             </p>
 

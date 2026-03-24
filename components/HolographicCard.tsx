@@ -51,7 +51,7 @@ export function HolographicCard({ children, className }: { children: React.React
                 transformStyle: "preserve-3d",
             }}
             className={cn(
-                "group relative rounded-3xl border border-white/20 bg-white/5 backdrop-blur-[12px] overflow-hidden transition-colors hover:border-white/40",
+                "group relative rounded-3xl border border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-3xl overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_var(--color-primary)]",
                 className
             )}
         >
