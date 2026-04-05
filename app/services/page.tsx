@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, FileText, ClipboardCheck, Briefcase, BookOpen, Wrench, Monitor } from "lucide-react"
+import { ArrowRight, FileText, ClipboardCheck, Briefcase, BookOpen, Wrench, Monitor, Globe } from "lucide-react"
 
 const services = [
   {
@@ -46,12 +46,12 @@ const services = [
     image: "/services/skills.png",
   },
   {
-    title: "Digital & Practical Support",
+    title: "Abroad Study Guidance",
     description:
-      "From online forms to digital documents, students face daily technical challenges. We solve them quickly and correctly.",
-    icon: Monitor,
-    href: "/services/digital",
-    image: "/services/digital.png",
+      "Comprehensive guidance for international universities, visa applications, and student support.",
+    icon: Globe,
+    href: "/services/abroad",
+    image: "/services/abroad.png",
   },
 ]
 

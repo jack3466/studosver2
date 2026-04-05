@@ -17,7 +17,7 @@ const services = [
   { id: "career", label: "Career / Internship Assistance" },
   { id: "academic", label: "Academic Support" },
   { id: "skills", label: "Skill Support" },
-  { id: "digital", label: "Digital & Practical Support" },
+  { id: "abroad", label: "Abroad Study Guidance" },
 ]
 
 interface ContactFormProps {

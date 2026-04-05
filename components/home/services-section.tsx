@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, FileText, ClipboardCheck, Briefcase, BookOpen, Wrench, Monitor } from "lucide-react"
+import { ArrowRight, FileText, ClipboardCheck, Briefcase, BookOpen, Wrench, Monitor, Globe } from "lucide-react"
 import { StaggeredList } from "@/components/StaggerContainer"
 import { HolographicCard } from "@/components/HolographicCard"
 import { ParallaxImage } from "@/components/ParallaxImage"
@@ -43,11 +43,11 @@ const services = [
     image: "/services/skills.png",
   },
   {
-    title: "Digital & Practical Support",
-    description: "Online forms, email setup, document scanning, and formatting",
-    icon: Monitor,
-    href: "/services/digital",
-    image: "/services/digital.png",
+    title: "Abroad Study Guidance",
+    description: "Comprehensive guidance for international universities, visa applications, and student support",
+    icon: Globe,
+    href: "/services/abroad",
+    image: "/services/abroad.png",
   },
 ]
 
