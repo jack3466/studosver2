@@ -36,8 +36,8 @@ const services = [
     image: "/services/academic.png",
   },
   {
-    title: "Skill Support",
-    description: "Computer skills, MS Office training, and digital communication",
+    title: "Skill Development",
+    description: "Computer skills, Communication & Soft skills, Interview Preparation, and MS Office training",
     icon: Wrench,
     href: "/services/skills",
     image: "/services/skills.png",

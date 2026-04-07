@@ -14,7 +14,7 @@ export function AccreditationSection() {
           <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-primary/10 rounded-full blur-[80px] opacity-60 pointer-events-none" />
 
           <h3 className="text-sm font-bold tracking-[0.2em] text-muted-foreground/80 uppercase mb-8 relative z-10">
-            Accredited By
+            Recognitions & Affiliations
           </h3>
           
           <div className="relative z-10 p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all duration-500 mb-8 backdrop-blur-sm group">
